@@ -36,7 +36,7 @@ body {
 
 .App {
     width: 375px;
-    height: 811px;
+    height: 100vh;
     overflow-x: hidden;
     // overflow-y: scroll;
     margin: 0 auto;
@@ -45,9 +45,13 @@ body {
 }
 
 .Main {
-    background: transparent linear-gradient(180deg, #6600FF 0%, #00CC99 100%) 0% 0% no-repeat padding-box;
-    height: 1075px;
+    height: 100vh;
     position: relative;
+    
+    .main{
+        background: transparent linear-gradient(180deg, #6600FF 0%, #00CC99 100%) 0% 0% no-repeat padding-box;
+        height: 1025px;
+    }
 
     .Navbar {
         width: 100%;
