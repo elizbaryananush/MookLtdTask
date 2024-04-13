@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    transition: 0.2s;
+}
+
+@keyframes signinShows {
+    0% {
+        backdrop-filter: blur(0px);
+    }
+
+    100% {
+        backdrop-filter: blur(60px);
+    }
+}
+
+@keyframes img1Anim {
+    0% {
+        width: 0px;
+    }
+
+    50% {
+        width: 315px;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+.App {
+    width: 375px;
+    height: 811px;
+    overflow-x: hidden;
+    // overflow-y: scroll;
+    margin: 0 auto;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.Main {
+    background: transparent linear-gradient(180deg, #6600FF 0%, #00CC99 100%) 0% 0% no-repeat padding-box;
+    height: 1075px;
+    position: relative;
+
+    .Navbar {
+        width: 100%;
+        height: 80px;
+        border-radius: 0px 0px 50px 50px;
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #FCEFF9;
+
+        h1 {
+            font: normal normal 900 35px/43px;
+            font-weight: 800;
+            color: #080708;
+        }
+
+        button {
+            width: 98px;
+            height: 36px;
+            background: #FCEFF9 0% 0% no-repeat padding-box;
+            box-shadow: 0px 0px 10px #6600FF66;
+            border: 2px solid #6600FF;
+            border-radius: 50px;
+            opacity: 1;
+            text-align: center;
+            font: normal normal normal 19px/25px;
+            font-weight: 700;
+            letter-spacing: 0px;
+            color: #6600FF;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        margin: 40px 0;
+
+        .item {
+            top: 123px;
+            left: 34px;
+            width: 308px;
+            height: 368px;
+            margin: 0 auto;
+            background: transparent linear-gradient(140deg, #FFF7FC66 0%, #FFFFFF66 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+            box-shadow: inset 3px 3px 6px #EEE5E9;
+            border-radius: 30px;
+            opacity: 1;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: center;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            padding-top: 13px;
+            cursor: pointer;
+
+            h1 {
+                width: fit-content;
+                margin-left: 13.5px;
+                text-align: left;
+                font: normal normal 900 35px/43px Montserrat;
+                letter-spacing: 0px;
+                color: #FCEFF9;
+                opacity: 1;
+            }
+
+            img {
+                width: 281px;
+                height: 281px;
+                border-radius: 30px;
+                object-fit: cover;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    footer {
+        top: 942px;
+        left: -12.272993087768555px;
+        height: 153px;
+        border-radius: 50px 50px 0px 0px;
+        background: #FCEFF9 0% 0% no-repeat padding-box;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 31px 49px 30px 48px;
+
+        p:nth-child(1) {
+            width: 278px;
+            height: 24px;
+            text-align: left;
+            font: normal normal normal 20px/24px SF Pro;
+            font-weight: 700;
+            letter-spacing: 0px;
+            color: #080708;
+            opacity: 1;
+        }
+
+        p:nth-child(2) {
+            text-align: left;
+            font: normal normal 100 20px/24px SF Pro;
+            letter-spacing: 0px;
+            color: #080708;
+            opacity: 1;
+        }
+    }
+
+    .Signin {
+        position: fixed;
+        z-index: 2;
+        height: 811px;
+        width: 375px;
+        background-color: transparent;
+        animation: signinShows 2s ease forwards;
+        display: flex;
+        align-items: center;
+
+        .close {
+            position: absolute;
+            top: 22px;
+            right: 62px;
+            cursor: pointer;
+        }
+
+        form {
+            width: 251px;
+            height: 225px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            margin: 0 auto;
+
+            input {
+                max-width: 231px;
+                height: 55px;
+                background-color: white;
+                box-shadow: 0px 0px 20px #08070880;
+                border: 2px solid #080708;
+                border-radius: 30px;
+                opacity: 1;
+                font: normal normal normal 25px/33px Test Söhne;
+                letter-spacing: 0px;
+                color: #080708;
+                padding: 0 10px;
+            }
+
+            button {
+                width: 169px;
+                height: 55px;
+                background: #00CC99 0% 0% no-repeat padding-box;
+                box-shadow: 0px 0px 20px #08070880;
+                border-radius: 30px;
+                opacity: 1;
+                text-align: center;
+                font: normal normal normal 25px/33px Test Söhne;
+                letter-spacing: 0px;
+                color: #FFF7FC;
+                opacity: 1;
+                margin: 0 auto;
+                border: 0;
+                outline: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .AddPhoto {
+        height: 100%;
+        max-width: 375px !important;
+        position: absolute;
+        z-index: 2;
+        background: hsla(264, 100%, 50%, 1);
+        background: linear-gradient(45deg, hsla(264, 100%, 50%, 1) 0%, hsla(165, 100%, 40%, 1) 71%);
+        background: -moz-linear-gradient(45deg, hsla(264, 100%, 50%, 1) 0%, hsla(165, 100%, 40%, 1) 71%);
+        background: -webkit-linear-gradient(45deg, hsla(264, 100%, 50%, 1) 0%, hsla(165, 100%, 40%, 1) 71%);
+        padding: 52px 30px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+        button {
+            width: 184px;
+            height: 55px;
+            background: #FCEFF9 0% 0% no-repeat padding-box;
+            box-shadow: 0px 0px 20px #08070880;
+            border-radius: 30px;
+            opacity: 1;
+            outline: 0;
+            border: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            cursor: pointer;
+
+            p {
+                width: 113px;
+                height: 40px;
+                text-align: left;
+                font: normal normal normal 30px/40px Test Söhne;
+                letter-spacing: 0px;
+                color: #080708;
+                opacity: 1;
+            }
+
+            svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .imageDiv {
+            position: relative;
+            width: 315px;
+            height: 315px;
+            border: 3px solid #EEE5E9;
+            border-radius: 20px;
+            overflow: hidden;
+
+            .img1 {
+                position: absolute;
+                width: 315px;
+                height: 315px;
+                background: url('./assets/image2.png');
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+
+                img {
+                    object-fit: cover;
+                    position: absolute;
+                    border-radius: 20px;
+                    width: 315px;
+                    height: 315px;
+                    z-index: -1;
+                }
+            }
+
+            .img1 {
+                left: 0 !important;
+                animation: img1Anim 2s ease infinite;
+            }
+        }
+
+        .addPhotoSection {
+            display: flex;
+            flex-direction: row;
+            column-gap: 22px;
+
+            div {
+                width: 100%;
+                height: 143px;
+                background: transparent linear-gradient(135deg, #FFF7FC66 0%, #FFFFFF66 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+                box-shadow: inset 3px 3px 6px #EEE5E9;
+                border-radius: 20px;
+                opacity: 1;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                padding-top: 17px;
+                cursor: pointer;
+
+                svg {
+                    fill: white;
+                }
+
+                p {
+                    text-align: center;
+                    font: normal normal normal 15px/20px Test Söhne;
+                    letter-spacing: 0px;
+                    color: #FCEFF9;
+                    opacity: 1;
+                    width: 108px;
+                }
+            }
+        }
+
+    }
+}
+
+.Photo {
+    height: 100%;
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 65px;
+    background: hsla(264, 100%, 50%, 1);
+    background: linear-gradient(45deg, hsla(264, 100%, 50%, 1) 0%, hsla(165, 100%, 40%, 1) 71%);
+    background: -moz-linear-gradient(45deg, hsla(264, 100%, 50%, 1) 0%, hsla(165, 100%, 40%, 1) 71%);
+    background: -webkit-linear-gradient(45deg, hsla(264, 100%, 50%, 1) 0%, hsla(165, 100%, 40%, 1) 71%);
+
+
+    img {
+        width: 244px;
+        margin-top: 49px;
+        height: 529px;
+        box-shadow: 0px 0px 10px #5FBB9780;
+        border-radius: 50px;
+    }
+
+    .first {
+        height: 65px;
+        background: #00CC99 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 20px #080F0FBF;
+        border-radius: 50px;
+        text-align: center;
+        font: normal normal normal 27px/36px Test Söhne;
+        letter-spacing: 0px;
+        color: #FFF7FC;
+        outline: 0;
+        border: 0;
+        margin-top: 35px;
+        cursor: pointer;
+    }
+
+    .second {
+        width: 190px;
+        height: 65px;
+        background: #FCEFF9 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 20px #080F0F80;
+        border-radius: 50px;
+        text-align: center;
+        font: normal normal normal 27px/36px Test Söhne;
+        letter-spacing: 0px;
+        color: #080708;
+        border: 0;
+        margin: 0 auto;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+}
