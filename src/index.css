@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+@font-face{
+    font-family: 'Test Söhne buch';
+    src: url('../src/assets/fonts/TestSöhne-Buch.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Test Söhne Dreiviertelfett';
+    src: url('../src/assets/fonts/TestSöhne-Dreiviertelfett.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Test Söhne Kräftig';
+    src: url('../src/assets/fonts/TestSöhne-Kräftig.otf') format('opentype');
+}
